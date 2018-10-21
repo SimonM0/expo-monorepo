@@ -1,2 +1,2 @@
 # expo-monorepo
-An expo monorepo boilerplate for react native
+An expo monorepo boilerplate for react native using yarn workspaces
