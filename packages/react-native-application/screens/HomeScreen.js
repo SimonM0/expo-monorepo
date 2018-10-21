@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-import { exampleFunction } from 'example-custom-package';
+import { exampleFunction, ExampleComponent } from 'example-custom-package';
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
@@ -17,28 +17,40 @@ export default class HomeScreen extends React.Component {
     header: null,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      tapCount: 0,
+    };
+  }
+
+  tapMe = () => {
+    const {tapCount} = this.state;
+
+    exampleFunction(tapCount);
+
+    this.setState({
+      tapCount: tapCount + 1,
+    })
+  };
+
   render() {
-    exampleFunction('Hello World');
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-            <Image
-              source={
-                __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
-              }
-              style={styles.welcomeImage}
-            />
-          </View>
-
           <View style={styles.getStartedContainer}>
+            <ExampleComponent
+              onPress={this.tapMe}
+            />
+
             {this._maybeRenderDevelopmentModeWarning()}
 
             <Text style={styles.getStartedText}>Get started by opening</Text>
 
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            <View style={[
+              styles.codeHighlightContainer,
+              styles.homeScreenFilename,
+            ]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
             </View>
 
@@ -57,7 +69,10 @@ export default class HomeScreen extends React.Component {
         <View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
 
-          <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
+          <View style={[
+            styles.codeHighlightContainer,
+            styles.navigationFilename,
+          ]}>
             <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
           </View>
         </View>
@@ -94,7 +109,7 @@ export default class HomeScreen extends React.Component {
 
   _handleHelpPress = () => {
     WebBrowser.openBrowserAsync(
-      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
+      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes',
     );
   };
 }
@@ -128,7 +143,7 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    marginHorizontal: 30,
   },
   homeScreenFilename: {
     marginVertical: 7,
