@@ -26,5 +26,13 @@
   },
   "workspaces": [
     "packages/*"
+  ],
+  "keywords": [
+    "lerna",
+    "monorepo",
+    "multi-package",
+    "react-native",
+    "yarn",
+    "workspaces"
   ]
 }
