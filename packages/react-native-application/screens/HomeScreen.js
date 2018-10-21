@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
-
+import { exampleFunction } from 'example-custom-package';
 import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
@@ -18,6 +18,7 @@ export default class HomeScreen extends React.Component {
   };
 
   render() {
+    exampleFunction('Hello World');
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
