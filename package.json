@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "lerna --scope=react-native-application run start --stream --"
+    "start": "expo start ./packages/react-native-application"
   },
   "author": "Fried-Chicken <Fried-Chicken@users.noreply.github.com>",
   "license": "MIT",
