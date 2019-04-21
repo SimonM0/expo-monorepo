@@ -4,17 +4,16 @@
     "description": "A very interesting project.",
     "slug": "react-native-application",
     "privacy": "public",
-    "sdkVersion": "30.0.0",
+    "sdkVersion": "32.0.6",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "rnCliPath" : "../../node_modules/react-native/local-cli/cli.js",
+    "rnCliPath": "../../node_modules/react-native/local-cli/cli.js",
     "nodeModulesPath": "../../",
     "entryPoint": "./index.js",
     "packagerOpts": {
-      "config": "./rn-cli.config.js",
-      "projectRoots": ""
+      "config": "./rn-cli.config.js"
     },
     "splash": {
       "image": "./assets/images/splash.png",
@@ -24,9 +23,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }

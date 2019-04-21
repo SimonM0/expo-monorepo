@@ -1,10 +1,11 @@
 {
   "name": "react-native-application",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "__generated__/AppEntry.js",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "expo start",
+    "postinstall": "expo-yarn-workspaces postinstall",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
@@ -15,11 +16,11 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
-    "expo": "^30.0.1",
+    "example-custom-package": "1.0.0",
+    "expo": "32.0.6",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-navigation": "^2.16.0",
-    "example-custom-package": "1.0.0"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-navigation": "^2.16.0"
   },
   "devDependencies": {
     "jest-expo": "30.0.0"
