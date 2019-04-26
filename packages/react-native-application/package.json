@@ -17,12 +17,13 @@
   "dependencies": {
     "@expo/samples": "2.1.1",
     "example-custom-package": "1.0.0",
-    "expo": "32.0.6",
-    "react": "16.3.1",
+    "expo": "32.0",
+    "react": "16.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^2.16.0"
   },
   "devDependencies": {
-    "jest-expo": "30.0.0"
+    "jest-expo": "30.0.0",
+    "schedule": "0.4.0"
   }
 }

@@ -8,10 +8,10 @@
   "license": "MIT",
   "dependencies": {
     "@expo/samples": "2.1.1",
-    "expo": "32.0.6",
+    "expo": "32.0",
     "metro-config": "^0.53.1",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^2.16.0"
   },
   "devDependencies": {

@@ -4,7 +4,7 @@
     "description": "A very interesting project.",
     "slug": "react-native-application",
     "privacy": "public",
-    "sdkVersion": "32.0.6",
+    "sdkVersion": "32.0.0",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
